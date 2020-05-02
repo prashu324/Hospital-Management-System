@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Health care Monitering system</title>
+	<link rel="icon" href="max-healthcare-logo.jpg"">
+</head>
+<body>
+	<div class="header">
+		<div class="hospital-logo">
+			<img src="max-healthcare-logo.jpg" height="100px;" width="250px;">
+			<img src="emergency.png" style="float: right;">
+		</div>
+	</div>
+	<div class="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About us</a></li>
+			<li><a href="findadoctor.php">Find a doctor</a></li>
+			<li><a href="contactus.html">Contact us</a></li>
+			<li class="dropdown"><a href="#">Quick links</a>
+				<div class="dropdown-content">
+					<a href="patientlogin.php">Patient Login</a>
+					<a href="doctorlogin.php">Doctor Login</a>
+					<a href="pharmacylogin.php">Pharmacy Login</a>
+					<a href="adminlogin.php">Admin Login</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="content">
+		<h1 style="font-size: 36px;text-align: center;">Patient Registration</h1>
+		<div class="form-content">
+			<form action="patientregistration.php" method="POST" name="signup" onsubmit="return validateform()">
+				<span style="color: red;">*</span> This indicates required Field.<br><br>
+				<label><b>First Name</b><span style="color: red;">*</span></label>
+				<input type="text" name="fname" placeholder="Enter your first name" required="" class="myinput" autofocus="" pattern="[A-Za-z]{}">
+
+				<label><b>Last Name</b><span style="color: red;">*</span></label>
+				<input type="text" name="lname" placeholder="Enter your last name" required="" class="myinput" pattern="[A-Za-z]{}">
+
+				<label><b>Email ID</b></label>
+				<input type="email" name="emailid" placeholder="Enter your emailid" class="myinput">
+
+				<label><b>Mobile</b><span style="color: red;">*</span></label>
+				<input type="text" name="mobile" placeholder="Enter your mobile number" required="" class="myinput" pattern="[0-9]{10}" title="Your mobile number should contain 10 digits between 0-9">
+
+				<label><b>Aadhar number</b><span style="color: red;">*</span></label>
+				<input type="text" name="aadhar" placeholder="Enter your Aadhar number" required="" class="myinput" pattern="[0-9]{12}" title="Your Aadhar number should contain 12 digits between 0-9">
+
+				<label><b>Date of Birth</b><span style="color: red;">*</span></label>
+				<input type="date" name="dob" placeholder="Select your Date of Birth" required="" class="myinput">
+
+				<label><b>Password</b><span style="color: red;" id="reqfield">*</span></label>
+				Password should be min of 8 characters including atleast one number,one uppercase,one lowercase and one special character
+				<input type="password" name="pw" placeholder="Enter password" required="" class="myinput" title="Min of 8 characters with atleast one symbol,one uppercase,one number,one lowercase characters.">
+
+				<label><b>Confirm Password</b><span style="color: red;">*</span></label>
+				<input type="password" name="cpw" placeholder="Re-Enter password" required="" class="myinput">
+				<p id="pwmatch"></p>
+
+				<label><b>Gender  </b><span style="color: red;">*</span></label>
+				<input type="radio" name="gender" value="Male" required="">Male
+				<input type="radio" name="gender" value="Female" required="">Female<br><br>
+
+				<label><b>Place</b><span style="color: red;">*</span></label>
+				<input type="text" name="place" placeholder="Enter your place of residence" required="" class="myinput" pattern="[A-Za-z]{}">
+
+				<input type="submit" name="submit" class="submit">
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		© 2017 Max Health Care by <b>Prasanth Sikakollu</b>
+	</div>
+	<script type="text/javascript">
+		var v=document.signup.pw;
+		var w=document.signup.cpw;
+		regexp=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?!.*\s).{8,}$/;
+		function validateform(){
+			if (v.value==w.value) {
+			}
+			else{
+				document.getElementById('pwmatch').innerHTML="Passwords do not match";
+				document.getElementById('pwmatch').style="color:red;";
+				return false;
+			}
+			if(v.value.match(regexp))
+				document.getElementById('pwmatch').innerHTML="Passwords match the required criteria";
+			else{
+				document.getElementById('pwmatch').innerHTML="Password should be min of 8 characters including atleast one number,one uppercase,one lowercase and one special character";
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+div.header{
+	margin: 0px auto;
+	height: 20%;
+	background-image: url('background-light-blue.jpg');
+}
+
+div.hospital-logo{
+	padding-right: 20px;
+}
+
+div.navigation ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: blue;
+	overflow: hidden;
+	clear: left;
+}
+
+div.navigation li{
+	float: left;
+	font-size: 16px;
+	color: white;
+	font-family: "arial";
+	text-align: center;
+}
+div.navigation li a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+div.navigation li a:hover{
+	background-color: rgb(120,120,120);
+}
+div.navigation li.dropdown {
+	float: right;
+}
+div.navigation li.dropdown a:hover{
+	background-color: rgb(0,150,255);
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	width: 160px;
+	font-size: 15px;
+}
+.dropdown-content a {
+	padding: 12px 12px;
+	text-decoration: none;
+	display: block;
+	text-align: right;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+	background-color: rgb(120,120,120);
+	right: 8px;
+}
+.dropdown:hover .dropdown-content a:hover{
+	background-color: rgb(0,150,255);
+}
+.content{
+	width: 80%;
+	float: center;
+	margin: auto;
+	padding-bottom: 10px;
+	min-height: 400px;
+}
+.content p{
+	text-align: justify;
+	font-size: 18px;
+}
+.footer{
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	font-family: "arial";
+	text-align: center;
+	position: center;
+	background-color: rgb(0,0,255);
+}
+img.social-media{
+	height: 35px;
+	width: 35px;
+}
+img.phone{
+	height: 35px;
+	width: 35px;
+	padding-left: 10px;
+	padding-right: 10px; 
+}
+img.social-media:hover{
+	height: 50px;
+	width: 50px;
+}
+
+input.myinput{
+	width: 90%;
+	padding: 12px 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+select{
+	width: 100%;
+	padding: 12px 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+textarea.myinput{
+	width: 90%;
+	padding: 12px 20px;
+	border-style: solid;
+	border-color: rgb(150,150,150);
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+input.submit{
+	width: 100%;
+	background-color: blue;
+	padding: 12px 20px;
+	color: white;
+	margin: 10px 0px;
+}
+.form-content{
+	width: 50%;
+	background-color: rgb(220,220,220);
+	margin: auto;
+	padding: 20px;
+}
+.myinput:focus{
+	border-style: solid;
+	border-color: black;
+}
